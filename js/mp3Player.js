@@ -1,25 +1,28 @@
 $(document).ready(function(){
     const songs = [
         {
-            title:"Hotel California",
-            file: "hotelCalifornia.mp3",
-            image: "/mp3/piss-in-the-wind.jpg"
+            title:"1AM FREESTYLE",
+            file: "mp3/1AM_FREESTYLE.mp3",
+            image: "img/smithereens.png"
         },
         {
-            title:"1AM FREESTYLE",
-            file: "1amFreestyle.mp3",
-            image: "/mp3/smithereens.png"
+            title:"After Thought",
+            file: "mp3/Afterthought.mp3",
+            image: "img/piss-in-the-wind.jpg"
         }
     ];
+
     let currentIndex = 0;
     let audio = $("#audioPlayer")[0];
 
     function loadSong(index){
         audio.src = songs[index].file;
-        $("albumArt").attr("src", songs[index].image);
-        $("songTitle").text(songs[index].title);
+
+        $("#albumArt").attr("src", songs[index].image);
+        $("#songTitle").text(songs[index].title);
     }
-    $("playPause").click(function(){
+
+    $("#playpause").click(function(){
         if(audio.paused){
             audio.play();
             $(this).text("Pause");
@@ -29,18 +32,24 @@ $(document).ready(function(){
             $(this).text("Play");
         }
     });
+
     $("#next").click(function(){
         currentIndex = (currentIndex + 1) % songs.length;
         loadSong(currentIndex);
         audio.play();
     });
+
     $("#prev").click(function(){
-        currentIndex = (currentIndex - 1 + songs.length) %songs.length;
+        currentIndex = (currentIndex - 1 + songs.length) % songs.length;
         loadSong(currentIndex);
         audio.play();
     });
+
     $("#shuffle").click(function(){
-        currentIndex = Math.floor(Math.random()*songs.length);
+        currentIndex = Math.floor(Math.random() * songs.length);
+        loadSong(currentIndex);
+        audio.play();
     });
+
     loadSong(currentIndex);
 });

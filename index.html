@@ -8,25 +8,41 @@
 </head>
 <body>
     <main>
-        <div class="main-container">
+        <div class="mp3-container">
             <div class="mp3-player">
                 <audio id="audioPlayer"></audio>
                 
                 <div class="albumArt-container">
                     <img id="albumArt" src="">
+                </div><div class="buttons-container">
+                        <button id="prev">Back</button>
+                        <button id="playpause">Play</button>
+                        <button id="next">Forward</button>
+                        <button id="shuffle">Shuffle</button>
+                        <h3 id="songTitle"></h3>
+                    </div>
+            </div>
+        </div>
+            <div class="mid-container">
+                <div class="jokes-container">
+                    <p id="jokes-text">Click to load joke</p>
+                    <button id="get-joke">New Joke</button>
                 </div>
 
-                <div class="buttons-container">
-                    <button id="prev">Back</button>
-                    <button id="playpause">Play</button>
-                    <button id="next">Forward</button>
-                    <button id="shuffle">Shuffle</button>
-                    <h3 id="songTitle"></h3>
-                </div>
+            <div class="ambientSounds-container">
+                <div><button id="rain">Rain</button><input id="rainSlider" type="range" min="0" max="100"></div>
+                <div><button id="thunder">Thunder</button><input id="thunderSlider" type="range" min="0" max="100"></div>
+                <div><button id="waves">Waves</button><input id="wavesSlider" type="range" min="0" max="100"></div>
+                <div><button id="wind">Wind</button><input id="windSlider" type="range" min="0" max="100"></div>
+                <div><button id="fire">Fire</button><input id="fireSlider" type="range" min="0" max="100"></div>
+                <div><button id="crickets">Crickets</button><input id="cricketsSlider" type="range" min="0" max="100"></div>
+                <div><button id="whiteNoise">White Noise</button><input id="whiteNoiseSlider" type="range" min="0" max="100"></div>
+                <div><button id="singingBowl">Singing Bowl</button><input id="singingBowlSlider" type="range" min="0" max="100"></div>
             </div>
         </div>
     </main>
     <script src="/js/jquery.js"></script>
     <script src="js/mp3Player.js"></script>
+    <script src="js/jokes.js"></script>
 </body>
 </html>

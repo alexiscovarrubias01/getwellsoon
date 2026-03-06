@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     const nerdyJokes = [
-        "Why did the math book look sad?Because it had too many problems.",
+        "Why did the math book look sad? Because it had too many problems.",
         "Why do Java developers wear glasses? Because they can't C#!",
         "How many programmers does it take to change a light bulb? None, that's a hardware problem.",
         "There are only 10 types of people in the world: those who understand binary and those who don't.",
